@@ -1,0 +1,17 @@
+{
+  "project_folder": "",
+  "plot_folder": "",
+  "site_name": "",
+  "als_treelist": "",
+  "ee_project": "",
+  "zipname": "",
+  "zmax": 3500,
+  "avg_tpa": "",
+  "add_trees": "",
+  "own_treelist": "",
+  "intelimon_plots_csv": "", 
+  "shrub_folder": "",
+  "field_fuel_load_dat": "",
+  "field_fuel_depth_dat": "",
+  "target_resolution": 1
+}
