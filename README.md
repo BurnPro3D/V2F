@@ -16,11 +16,11 @@ inside the als folder, you have the .laz files from 3DEP downloaded
 if you have run the updated IntELimon code, it was already run and outputs are saved to a folder (you can set the path)
 
 
-To run this script, you also need to have a FastFuels v2 API key, available [here]([url](https://beta-app-fastfuels-silvxlabs.web.app)) 
+To run this script, you also need to have a FastFuels v2 API key, available [here](https://beta-app-fastfuels-silvxlabs.web.app) 
 run export FF_API_KEY="your-key-here" in the terminal to set the API key
 
 
-To run run_als.sh, you will need to have PDAL installed - see [here]([url](https://pdal.org/en/2.10.2/quickstart.html)) 
+To run run_als.sh, you will need to have PDAL installed - see [here](https://pdal.org/en/2.10.2/quickstart.html)
 
 
 Usage: ./run_[als or code].sh [path/to/pipeline_config.json]
@@ -59,4 +59,4 @@ field_fuel_load_dat - string (path) or "NA", this is the path to where you want 
 
 field_fuel_depth_dat - string (path) or "NA", this is the path to where you want to save your new fuel depth dat file, path only used if there is field data
 
-There is an zipped example for St. Marks [here]([url](https://drive.google.com/file/d/1aMfSuTSHzfyklssZkBnJwYbkIUxCOhZO/view?usp=drive_link)) with all the starting data that is necessary to run this script.
+There is an zipped example for St. Marks [here](https://drive.google.com/file/d/1aMfSuTSHzfyklssZkBnJwYbkIUxCOhZO/view?usp=drive_link) with all the starting data that is necessary to run this script.
