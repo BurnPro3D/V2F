@@ -1,0 +1,18 @@
+{
+  "project_folder": "/st_marks_test/",
+  "plot_folder": "NA",
+  "site_name": "NA",  
+  "site": "st_marks",
+  "als_treelist": "data/als_treelist.csv",
+  "ee_project": "your-ee-project",
+  "zipname": "quicfire_inputs.zip",
+  "zmax": 3500,
+  "avg_tpa": "None",
+  "add_trees": "True",
+  "own_treelist": "True",
+  "shrub_folder": "/data/shrubs_modified/",
+  "intelimon_plots_csv": "./intelimonplots.csv", 
+  "field_fuel_load_dat": "NA",
+  "field_fuel_depth_dat": "NA",
+  "target_resolution": 1
+}
