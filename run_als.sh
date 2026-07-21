@@ -48,5 +48,9 @@ echo "  site_name=$site_name"
 python create_domain.py "$project_folder"
 echo "Created domain for site $site_name in $project_folder"
 
+python search_stac.py "$project_folder"
+echo "Searched STAC for $site_name data in $project_folder"
+
 python ALS_to_treetops.py "$project_folder" "$zmax" "$target_resolution"
 echo "Created treetops from ALS data for site $site_name in $project_folder"
+ 

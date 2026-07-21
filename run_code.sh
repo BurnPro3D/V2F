@@ -48,34 +48,34 @@ fi
 ff_api_key="$FF_API_KEY"
 
 
-# echo "Using config: $config_file"
-# echo "  project_folder=$project_folder"
-# echo "  site_name=$site"
+echo "Using config: $config_file"
+echo "  project_folder=$project_folder"
+echo "  site_name=$site"
 
 
-# python create_treelist.py "$project_folder" "$plot_folder" "$site_name" "$als_treelist" "$avg_tpa" "$add_trees" "$ff_api_key"
-# echo "Created treelist for site $site in $project_folder"
-# python voxelize_ff.py "$project_folder" "$site_name" "$als_treelist" "$own_treelist" "$zipname" "$ff_api_key" "$target_resolution"
-# echo "Voxelized trees for site $site in $project_folder"
+python create_treelist.py "$project_folder" "$plot_folder" "$site_name" "$als_treelist" "$avg_tpa" "$add_trees" "$ff_api_key"
+echo "Created treelist for site $site in $project_folder"
+python voxelize_ff.py "$project_folder" "$site_name" "$als_treelist" "$own_treelist" "$zipname" "$ff_api_key" "$target_resolution"
+echo "Voxelized trees for site $site in $project_folder"
 
-# unzip -o "$project_folder/$zipname" -d "$project_folder"/data
+unzip -o "$project_folder/$zipname" -d "$project_folder"/data
 
-# python generate_shrubs.py "$project_folder" "$plot_folder" "$site_name" "$shrub_folder" "$intelimon_plots_csv" 
-# echo "Generated shrubs for site $site in $project_folder"
+python generate_shrubs.py "$project_folder" "$plot_folder" "$site_name" "$shrub_folder" "$intelimon_plots_csv" 
+echo "Generated shrubs for site $site in $project_folder"
 
-# if [[ "$plot_folder" != 'NA' ]]; then
-#     python field_data_fuel_loading.py "$project_folder" "$plot_folder" "$site_name" "$ee_project" "$field_fuel_load_dat" "$field_fuel_depth_dat"
-#     echo "Processed field data for site $site in $project_folder"
-# else
-#     echo "No field data provided, skipping field data processing."
-# fi
+if [[ "$plot_folder" != 'NA' ]]; then
+    python field_data_fuel_loading.py "$project_folder" "$plot_folder" "$site_name" "$ee_project" "$field_fuel_load_dat" "$field_fuel_depth_dat"
+    echo "Processed field data for site $site in $project_folder"
+else
+    echo "No field data provided, skipping field data processing."
+fi
 
-# python voxelize_shrubs.py "$project_folder" "$site_name" "$site" "$field_fuel_load_dat" "$field_fuel_depth_dat"
-# echo "Voxelized shrubs for site $site in $project_folder"
+python voxelize_shrubs.py "$project_folder" "$site_name" "$site" "$field_fuel_load_dat" "$field_fuel_depth_dat"
+echo "Voxelized shrubs for site $site in $project_folder"
 
-# #save adjusted files to rename them
-# cp "$project_folder/data/treesfueldepth_adj.dat" "$project_folder/data/treesfueldepth.dat"
-# cp "$project_folder/data/treesrhof_adj.dat" "$project_folder/data/treesrhof.dat"
+#save adjusted files to rename them
+cp "$project_folder/data/treesfueldepth_adj.dat" "$project_folder/data/treesfueldepth.dat"
+cp "$project_folder/data/treesrhof_adj.dat" "$project_folder/data/treesrhof.dat"
 
 python fill_dat_to_netcdf.py "$project_folder" "$site"
 echo "Saved voxelized data to NetCDF for site $site in $project_folder"
